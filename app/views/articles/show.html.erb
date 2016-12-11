@@ -1,11 +1,20 @@
-<p>
-	<strong>Title:</strong>
-	<%= @article.title %>
-</p>
+<div class="container">
 
-<p>
-	<strong>Text:</strong>
-	<%= @article.content %>
-</p>
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Back', articles_path %>
+	<div class="row col-lg-offset-4 col-lg-4">
+		<strong>Title:</strong>
+		<%= @article.title %>
+	</div>
+
+	<div class="row col-lg-offset-4 col-lg-4">
+		<strong>Text:</strong>
+		<%= @article.content %>
+	</div>
+
+	<div class="row col-lg-offset-4 col-lg-4">
+		<%= link_to 'Edit', edit_article_path(@article) %>
+	</div>
+
+	<div class="row col-lg-offset-4 col-lg-4">
+		<%= link_to 'Back', articles_path %>		
+	</div>
+</div>	

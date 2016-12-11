@@ -1,17 +1,25 @@
-<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
-	<p>
-		<%= f.label :title %> <br>
-		<%= f.text_field :title %>
-	</p>
-	<p>
-		<%= f.label :content %> <br>
-		<%= f.text_area :content %>
-	</p>
+<div class="container">
 
-	<p>
-		<%= f.submit %>
-	</p>
+		<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
 
-<% end %>
+		<div class="row col-lg-offset-4 col-lg-4 form-group">
+				<%= f.label :title %> <br>
+				<%= f.text_field :title, class: "form-control" %>
+		</div>
 
-<% link_to 'Back', articles_path %>
+		<div class="row col-lg-offset-4 col-lg-4 form-group">
+				<%= f.label :content %> <br>
+				<%= f.text_area :content, class: "form-control", rows: "5" %>
+		</div>
+
+		<div class="row col-lg-offset-4 col-lg-4 form-group">
+				<%= f.submit class: "btn btn-lg btn-primary btn-block" %>
+		</div>
+
+		<% end %>
+
+	<div class="row col-lg-offset-4 col-lg-4 form-group">
+		<%= link_to 'Back', articles_path %>
+	</div>
+
+</div>
